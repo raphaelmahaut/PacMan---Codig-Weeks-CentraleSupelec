@@ -1,0 +1,55 @@
+Objectifs
+
+1er MVP :
+Fonctionnalité 1 : Créer la grille de jeu
+Fonctionnalité 2 : Contrôler Pac-Man
+
+Étape 1 : Afficher Pac-Man
+Étape 2 : Faire bouger Pac-Man
+Fonctionnalité 3 : Gérer les gommes
+Étape 1 : Afficher les gommes
+Étape 2 : Gérer les collision entre Pac-Man et les gommes
+Étape 3 : Fin du jeu (toutes les gommes collectées)
+
+
+
+--> Pac-man peut se déplacer dans une grille et attraper les gommes. Le jeu se termine lorsque toutes les gommes sont collectées. Mettons à présent en scène les fantômes.
+
+2e MVP :
+Fonctionnalité 4 : Afficher l'interface
+Fonctionnalité 5 : Ajouter les fantômes
+
+Étape 1 : Afficher les fantômes
+Étape 2 : Faire bouger les fantômes (de manière aléatoire dans un premier temps)
+Étape 3 : Gérer la collision Pac-Man / fantôme
+
+
+
+--> Les fantômes se déplacent en choisissant aléatoirement une direction à chaque intersection. Jeu terminé lorsque toutes les gommes sont récupérées OU quand un fantôme touche Pac-man
+
+3e MVP :
+Fonctionnalité 6 : Prise en compte de boules spéciales et changement de l’interaction entre Pac-Man et les fantômes lorsque cette boule est attrapée
+Fonctionnalité 7 : Ajout de paramètres de jeu
+
+Étape 1 : Affichage du score
+Étape 2 : Affichage des vies
+Étape 3 : Affichage des fruits
+Fonctionnalité 8 : Paramétrer le mouvement des fantômes, avoir des fantômes intelligents
+Étape 1 : Chaque fantôme a une manière singulière de se déplacer, ils peuvent ainsi se coordonner pour capturer Pac-Man :
+
+Blinky, le fantôme rouge, vise la case de Pac-Man (il le poursuit directement)
+Pinky, le fantôme rose, vise 4 cases devant Pac-Man (cela le fait contourner Pac-Man (il essaie donc de le prendre en tenaille avec Blinky ))
+Clyde, le fantôme orange, chasse Pac-Man comme Blinky si ce dernier est loin (plus de 8 cases), sinon il prend une direction aléatoire
+Inky, le fantôme bleu, vise la case définie par la case de Blinky et le double du vecteur entre Pac-Man et Blinky (il essaie donc d'aller là où Pac-Man fuit logiquement Blinky)
+
+
+Étape 2 : le fantôme rouge se met en colère lorsque un certain nombre de gommes est attrapé, il s'accélère
+Étape 3 : Cycles de 30s. Pendant 24-27 secondes, les fantômes chassent Pac-Man. Pendant le temps restant, chaque fantôme part dans un coin de la grille
+Fonctionnalité 9 : Gérer les différents niveaux
+Étape 1 : Créer les différents niveaux
+Étape 2 : Gérer l'apparition des fruits
+Étape 3 : Modifier la vitesse des fantômes selon le niveau
+
+
+
+--> Chacun des 4 fantômes a une manière personnelle de bouger. Les super-gommes changent temporairement le cours du jeu lorsqu'elles sont attrapées : les fantômes ont peur de Pac-man, et lorsqu'il les touchent, ils sont téléportés et repartent depuis leur base. Prise en compte de vies : Pac-man peut être touché 3 fois avant que la partie soit perdue. On compte également un score. À chaque niveau, un fruit peut apparaître. Lorsqu'il est capturé, il rapporte beaucoup de points au joueur. Lorsqu'un niveau est réussi, un nouveau niveau commence et la vitesse des fantômes est augmentée.

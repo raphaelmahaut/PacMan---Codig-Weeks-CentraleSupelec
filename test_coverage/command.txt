@@ -1,0 +1,1 @@
+python -m pytest --cov=coding_weeks/plant-man/jeu --cov-report html plant-man/test/
